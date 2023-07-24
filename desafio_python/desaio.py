@@ -1,12 +1,13 @@
 import os
 
 menu = """
-    Menu
-[d] Depósito
-[s] Saque
+
+[d] Depositar
+[s] Sacar
 [e] Extrato
 [q] Sair
-"""
+
+=> """
 # VARIAVEIS E CONSTANTES
 LIMITE_DIARIO = 500
 LIMITE_DE_SAQUE = 3
@@ -74,8 +75,10 @@ Seu limite diario esta em R${limitador_diario: .2f} e ainda pode sacar R${LIMITE
     # VALIDAÇÂO DO EXTRATO
     elif option == "e":
         os.system("cls" if os.name == "nt" else "clear")
+        print("\n================ EXTRATO ================")
         print(extrato)
-        print(f"Seu saldo esta em : R${saldo: .2f}")
+        print(f"Saldo : R${saldo: .2f}")
+        print("==========================================")
         input("Pressione ENTER para continuar...")
     elif option == "q":
         os.system("cls" if os.name == "nt" else "clear")
